@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="bst.js"></script>
+</head>
+<body>
+    <h1>Binary Tree</h1>
+    <div>
+    <div class='input-box'>
+      <input id='addElem' type='number' placeholder='Enter a number'>
+      <button id='add' onclick="VisualizeTree()">Add to Tree</button>
+    </div>
+    <!-- <div class='input-box'>
+      <input id='removeElem' type='number' placeholder='Enter a number'>
+      <button id='remove' onclick="VisualizeTree()">Delete from Tree</button>
+    </div> -->
+  </div>
+    <div class="tree center">
+      <canvas id='my-canvas' width="1000" height="500">
+        Your browser does not support canvas
+      </canvas>
+    </div>
+  </body>
+
+
+  <script>
+    var bst = new BST();
+    function VisualizeTree()
+    {
+        input = parseInt(document.getElementById('addElem').value);
+        if(input){
+            bst.insert(input);
+        }
+        else
+            alert("Invalid Input : Please Enter a Number");
+    }
+
+
+
+  </script>
